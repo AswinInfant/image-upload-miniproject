@@ -36,7 +36,7 @@ router.post('/post', upload.single('image'), async function (req, res) {
       }, function(error, response, body) {
       if(error) return console.error('Request failed:', error);
       else if(response.statusCode != 200) return console.error('Error:', response.statusCode, body.toString('utf8'));
-      else return res.status(200).json({ foodname: answer, food_Details: body.toString() });
+      else return res.status(200).json({ foodname: answer, food_Details: body.toString()});
     });
     }, 500);
 	} )
